@@ -1,0 +1,47 @@
+% ============================================================
+%  config/layout.tex
+% ============================================================
+
+\geometry{left=1.5cm, right=1.5cm, bottom=1.0cm, top=1.1cm}
+
+\newcommand{\tabitem}{\par\noindent~~\llap{\textbullet}~~}
+\newcommand{\entrysep}{\multicolumn{2}{c}{}\vspace{2mm} \\}
+
+% ── \cventry ─────────────────────────────────────────────────
+\newcommand{\cventry}[6]{%
+  \multicolumn{1}{@{}r@{}|}{%
+    \begin{tabular}{r} \emph{#2} \\ \\ #1 \end{tabular}%
+  }%
+  &%
+  \multicolumn{1}{l}{%
+    \begin{tabularx}{0.9\textwidth}{@{}X@{}}
+      {\headingfont\textbf{#3}}, \small #4
+      \hfill
+      \small{\color{darkgrey} {#5}}
+      \vspace{2mm} \\
+      \small #6
+    \end{tabularx}%
+  }%
+  \\ \entrysep
+}
+
+% ── Education entry macro ────────────────────────────────────
+\newcommand{\eduentry}[4]{%
+  \multicolumn{1}{@{}r@{}|}{%
+    \begin{tabular}{r} #1 \end{tabular}%
+  }%
+  &%
+  \multicolumn{1}{l}{%
+    \renewcommand{\arraystretch}{1.4}%
+    \begin{tabularx}{0.88\textwidth}{@{}X@{}}
+      \setstretch{1.2}
+      \textbf{#2}, \href{#3}{\textbf{#4}}
+    \end{tabularx}%
+  }%
+  \\ \multicolumn{2}{c}{} \vspace{-2mm} \\
+}
+
+% ── Section heading ──────────────────────────────────────────
+\newcommand{\cvsection}[2]{%
+  \section[#2]{{\upshape\color{myblue} #1} \hfill {\upshape\headingfont\color{darkgrey}\small{#2}}}%
+}

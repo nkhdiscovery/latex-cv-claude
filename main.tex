@@ -1,0 +1,68 @@
+% ============================================================
+%  NAVID KHAZAEE — CURRICULUM VITAE
+%  Compile with XeLaTeX (Overleaf: Menu → Compiler → XeLaTeX)
+% ============================================================
+%
+%  STRUCTURE
+%  ─────────
+%  main.tex              ← compile this
+%  config/
+%    colors.tex          ← change myblue RGB to retheme
+%    packages.tex        ← all \usepackage declarations
+%    fonts.tex           ← font families & icon fonts
+%    layout.tex          ← geometry, macros
+%  sections/
+%    header.tex          ← name, headline, summary  [AGENT-EDITABLE]
+%    experience.tex      ← work history             [AGENT-EDITABLE]
+%    skills.tex          ← technical skills         [AGENT-EDITABLE]
+%    education.tex       ← degrees
+%    honors.tex          ← awards
+%    publications.tex    ← papers
+%    projects.tex, teaching.tex, memberships.tex,
+%    languages.tex, certificates.tex, hobbies.tex
+%
+%  AGENT INSTRUCTIONS
+%  ──────────────────
+%  Edit [AGENT-EDITABLE] files to tailor for a role.
+%  Toggle sections by commenting/uncommenting \input lines.
+%  Do NOT edit config/ unless changing overall style.
+% ============================================================
+
+\documentclass[a4paper,9pt]{article}
+
+\input{config/colors}
+\input{config/packages}
+\input{config/fonts}
+\input{config/layout}
+
+% ════════════════════════════════════════════════════════════
+\begin{document}
+% ════════════════════════════════════════════════════════════
+
+\input{sections/header}
+
+\vspace{-0.3cm}
+
+% ── Core sections ───────────────────────────────────────────
+\input{sections/experience}
+\input{sections/skills}
+\input{sections/education}
+
+% ── Optional sections — comment out what you don't need ─────
+
+\enlargethispage{15mm}
+\input{sections/honors}
+\input{sections/languages}
+% \input{sections/publications}
+% \input{sections/projects}
+% \input{sections/teaching}
+% \input{sections/memberships}
+% \input{sections/languages}
+% \input{sections/certificates}
+% \input{sections/hobbies}
+% \input{sections/references}
+
+\vspace{3mm}
+\noindent{\small\color{darkgrey}\textit{References available on request.}}
+
+\end{document}

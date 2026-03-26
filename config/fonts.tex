@@ -1,0 +1,32 @@
+% ============================================================
+%  config/fonts.tex
+%  Body:     Carlito (Calibri equivalent)
+%  Headings: Montserrat SemiBold
+% ============================================================
+
+% ── Body font: Carlito (Calibri equivalent) ──────────────────
+\setmainfont{Carlito}[
+  Path           = ./,
+  UprightFont    = Carlito-Regular.ttf,
+  BoldFont       = Carlito-Bold.ttf,
+  ItalicFont     = Carlito-Italic.ttf,
+  BoldItalicFont = Carlito-BoldItalic.ttf,
+]
+
+% ── Heading font: Montserrat SemiBold ────────────────────────
+\newfontfamily\headingfont{Montserrat}[
+  Path        = ./,
+  UprightFont = Montserrat-SemiBold.ttf,
+  BoldFont    = Montserrat-Bold.ttf,
+  ItalicFont  = Montserrat-SemiBoldItalic.ttf,
+]
+
+% ── Icon / decorative fonts ──────────────────────────────────
+\newfontfamily{\awesomeFontNew}[Path=./]{FontAwesome.otf}
+\newfontfamily{\ioniconsFont}[Path=./]{ionicons.ttf}
+\newfontfamily{\icomoonPenFont}[Path=./]{icomoonPen.ttf}
+\newfontfamily{\teacherFont}[Path=./]{teacher.ttf}
+\newfontfamily{\materialFont}[Path=./]{MaterialIcons-Regular.ttf}
+
+% ── Icon macro ───────────────────────────────────────────────
+\newcommand{\seticon}[1]{\textcolor{myblue}{\upshape\csname #1\endcsname}}

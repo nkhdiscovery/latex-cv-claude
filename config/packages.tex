@@ -1,0 +1,61 @@
+% ============================================================
+%  config/packages.tex — All \usepackage declarations
+%  Keep package loading here; avoid scattering it in sections.
+% ============================================================
+
+% ── Encoding & language ─────────────────────────────────────
+% inputenc must NOT be loaded with XeLaTeX — source is UTF-8 natively.
+\usepackage{xunicode,xltxtra,url}
+
+% ── Font loading (XeLaTeX) ──────────────────────────────────
+\usepackage{fontspec}
+% fontawesome icons are loaded directly via OTF file in config/fonts.tex
+
+% ── Page layout ─────────────────────────────────────────────
+\usepackage{geometry}
+\usepackage{fullpage}
+\usepackage[absolute,overlay]{textpos}
+\setlength{\TPHorizModule}{1mm}
+\setlength{\TPVertModule}{1mm}
+\textblockorigin{10mm}{10mm}
+\setlength{\parindent}{0pt}
+
+% ── Graphics & colour ───────────────────────────────────────
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{tikz}
+\usepackage{tikzpagenodes}
+\usetikzlibrary{calc}
+\usepackage{transparent}
+\usepackage{wallpaper}
+\usepackage{svg}
+
+% ── Tables ──────────────────────────────────────────────────
+\usepackage{array}
+\usepackage{xltabular}
+\usepackage{tabularx}
+
+% ── Hyperlinks ──────────────────────────────────────────────
+\usepackage[
+  colorlinks = true,
+  linkcolor  = linkcolour,
+  urlcolor   = linkcolour,
+  citecolor  = linkcolour,
+  anchorcolor= linkcolour,
+  hyperfootnotes = false
+]{hyperref}
+
+% ── Typography helpers ──────────────────────────────────────
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{calc}
+\usepackage{marvosym}
+\usepackage{calligra}
+% \usepackage[normalem]{ulem}   % \sout{} strikethrough — not available on all systems
+
+% ── Section title formatting ────────────────────────────────
+\titleformat{\section}{\headingfont\normalsize\raggedright}{}{0em}{}[\color{myblue}\titlerule]
+\titlespacing{\section}{0pt}{2pt}{1pt}
+
+% ── Hyphenation fix ─────────────────────────────────────────
+\hyphenation{im-pre-se}
